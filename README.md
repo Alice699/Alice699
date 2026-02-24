@@ -11,7 +11,8 @@ I'm a developer who enjoys building things for the web —
 currently sharpening my skills in Python and JavaScript.
 
 🛠 Tech Stack
-CategoryToolsLanguagesPython · JavaScript · HTML · CSSToolsGit · VS Code
+Languages: Python · JavaScript · HTML · CSS
+Tools: Git · VS Code
 
 🌱 Currently Learning
 
@@ -22,20 +23,12 @@ Clean code practices and project structure
 
 📬 Let's Connect
 
-📧 Email: Robbiansaputragumay@gmail.com
-✍️ Medium: medium.com/@RobbianSaputraGumay
+📧 Robbiansaputragumay@gmail.com
+✍️ medium.com/@RobbianSaputraGumay
 💬 Discord: Alicenotfound
-✈️ Telegram: t.me/JisooSelaluBenar
+✈️ t.me/JisooSelaluBenar
 
 
-<div align="center">
-```
-╔══════════════════════════════════════════════════════╗
-║                                                      ║
-║   " First, solve the problem.                        ║
-║      Then, write the code. "                         ║
-║                                                      ║
-║                              — Ken Thompson          ║
-╚══════════════════════════════════════════════════════╝
-```
-</div>
+
+💭 "First, solve the problem. Then, write the code."
+                                              — Ken Thompson
