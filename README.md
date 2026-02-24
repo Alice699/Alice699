@@ -23,4 +23,5 @@ Clean code practices and project structure
 ✈️ Telegram: t.me/Jisooselalubenar
 
 
-"First, solve the problem. Then, write the code
+"First, solve the problem. Then, write the code."
+— Ken Thompso
