@@ -1,16 +1,33 @@
-## Hi there 👋
+<div align="center">
+Hi, I'm Robbian 👋
+Web Developer in Progress · Python & JavaScript Enthusiast
+I'm a developer who enjoys building things for the web —
+currently sharpening my skills in Python and JavaScript.
+</div>
 
-<!--
-**Alice699/Alice699** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🛠 Tech Stack
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
 
-Here are some ideas to get you started:
+🌱 Currently Learning
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Building responsive and interactive websites
+Python scripting and automation
+Clean code practices and project structure
+
+
+📬 Let's Connect
+<div align="left">
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
+Tampilkan Gambar
+</div>
+
+<div align="center">
+"First, solve the problem. Then, write the code."
+</div>
