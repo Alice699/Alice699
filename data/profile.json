@@ -1,0 +1,44 @@
+{
+  "updatedAt": "2026-10-10T04:28:51.891Z",
+  "username": "Alice699",
+  "name": "Robbian Saputra Gumay",
+  "location": "South Sumatera, Indonesia",
+  "statistics": {
+    "publicRepositories": 25,
+    "stars": 3,
+    "followers": 3,
+    "following": 9,
+    "publicGists": 3
+  },
+  "languages": [
+    "TypeScript",
+    "Python",
+    "Shell"
+  ],
+  "recentRepositories": [
+    {
+      "name": "cambrian",
+      "fullName": "Alice699/cambrian",
+      "url": "https://github.com/Alice699/cambrian",
+      "language": "TypeScript",
+      "description": "",
+      "pushedAt": "2026-10-09T02:05:50Z"
+    },
+    {
+      "name": "mergepay-demo",
+      "fullName": "Alice699/mergepay-demo",
+      "url": "https://github.com/Alice699/mergepay-demo",
+      "language": null,
+      "description": "",
+      "pushedAt": "2026-10-07T14:38:43Z"
+    },
+    {
+      "name": "mergepay",
+      "fullName": "Alice699/mergepay",
+      "url": "https://github.com/Alice699/mergepay",
+      "language": "TypeScript",
+      "description": "Onchain bounties for GitHub pull requests, powered by Rialo. Verify contributors, escrow RLO, and settle payouts or refunds automatically through REX.",
+      "pushedAt": "2026-10-07T07:56:34Z"
+    }
+  ]
+}

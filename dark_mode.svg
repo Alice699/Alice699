@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="profile-title profile-desc">
   <title id="profile-title">Robbian Saputra Gumay — Alice699 GitHub profile</title>
-  <desc id="profile-desc">A terminal-style profile card featuring an animated coder cat, developer focus, technology stack, recent repositories, and public GitHub statistics.</desc>
+  <desc id="profile-desc">A terminal-style profile card featuring an animated coder cat, developer focus, technology stack, recent repositories, and public GitHub statistics. Last refreshed 10 Oct 2026, 11:28 WIB.</desc>
   <style>
     @media (prefers-reduced-motion: reduce) {
       .motion { display: none; }
@@ -136,34 +136,34 @@
     <line x1="742" y1="100" x2="1148" y2="100" stroke="#3d444d"/>
     <text x="600" y="141" fill="#f2cc60" font-size="15">name</text><text x="770" y="141" fill="#e6edf3" font-size="16">Robbian Saputra Gumay</text>
     <text x="600" y="172" fill="#f2cc60" font-size="15">alias</text><text x="770" y="172" fill="#e6edf3" font-size="16">Alice699</text>
-    <text x="600" y="203" fill="#f2cc60" font-size="15">location</text><text x="770" y="203" fill="#e6edf3" font-size="16">Palembang, Indonesia</text>
+    <text x="600" y="203" fill="#f2cc60" font-size="15">location</text><text x="770" y="203" fill="#e6edf3" font-size="16">South Sumatera, Indonesia</text>
     <text x="600" y="234" fill="#f2cc60" font-size="15">role</text><text x="770" y="234" fill="#e6edf3" font-size="16">Full Stack + Web3 Builder</text>
 
     <text x="600" y="279" fill="#a855f7" font-size="14" font-weight="700" letter-spacing="1">02 / STACK</text>
     <line x1="713" y1="274" x2="1148" y2="274" stroke="#3d444d"/>
-    <text x="600" y="316" fill="#f2cc60" font-size="15">languages</text><text x="770" y="316" fill="#e6edf3" font-size="16">TypeScript / Rust / Python / Shell</text>
+    <text x="600" y="316" fill="#f2cc60" font-size="15">languages</text><text x="770" y="316" fill="#e6edf3" font-size="16">TypeScript / Python / Shell</text>
     <text x="600" y="348" fill="#f2cc60" font-size="15">web</text><text x="770" y="348" fill="#e6edf3" font-size="16">Node.js / React / Next.js</text>
     <text x="600" y="380" fill="#f2cc60" font-size="15">web3</text><text x="770" y="380" fill="#e6edf3" font-size="16">Avail / Ethereum / Solidity</text>
 
     <text x="600" y="427" fill="#a855f7" font-size="14" font-weight="700" letter-spacing="1">03 / RECENT REPOS</text>
     <line x1="770" y1="422" x2="1148" y2="422" stroke="#3d444d"/>
-    <text x="600" y="463" fill="#58a6ff" font-size="14">01</text><text x="648" y="463" fill="#e6edf3" font-size="16">onthru</text><text x="1046" y="463" fill="#8b949e" font-size="14">TypeScript</text>
-    <text x="600" y="495" fill="#58a6ff" font-size="14">02</text><text x="648" y="495" fill="#e6edf3" font-size="16">telegram-warung-bot</text><text x="1090" y="495" fill="#8b949e" font-size="14">Python</text>
-    <text x="600" y="527" fill="#58a6ff" font-size="14">03</text><text x="648" y="527" fill="#e6edf3" font-size="16">miden-vm</text><text x="1107" y="527" fill="#8b949e" font-size="14">Rust</text>
+    <text x="600" y="463" fill="#58a6ff" font-size="14">01</text><text x="648" y="463" fill="#e6edf3" font-size="16"><title>Alice699/cambrian</title>cambrian</text><text x="1148" y="463" text-anchor="end" fill="#8b949e" font-size="14">TypeScript</text>
+    <text x="600" y="495" fill="#58a6ff" font-size="14">02</text><text x="648" y="495" fill="#e6edf3" font-size="16"><title>Alice699/mergepay-demo</title>mergepay-demo</text><text x="1148" y="495" text-anchor="end" fill="#8b949e" font-size="14">—</text>
+    <text x="600" y="527" fill="#58a6ff" font-size="14">03</text><text x="648" y="527" fill="#e6edf3" font-size="16"><title>Alice699/mergepay</title>mergepay</text><text x="1148" y="527" text-anchor="end" fill="#8b949e" font-size="14">TypeScript</text>
 
     <text x="600" y="571" fill="#a855f7" font-size="14" font-weight="700" letter-spacing="1">04 / PUBLIC STATS</text>
-    <line x1="769" y1="566" x2="1065" y2="566" stroke="#3d444d"/>
-    <text x="1148" y="571" text-anchor="end" fill="#8b949e" font-size="11">JUL 2026</text>
+    <line x1="790" y1="566" x2="945" y2="566" stroke="#3d444d"/>
+    <text x="1148" y="571" text-anchor="end" fill="#8b949e" font-size="11">10 OCT 2026</text>
 
     <g text-anchor="middle">
       <rect x="600" y="588" width="100" height="58" rx="10" fill="#161b22" stroke="#2d333b"/>
-      <text x="650" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">REPOS</text><text x="650" y="635" fill="#e6edf3" font-size="22" font-weight="700">19</text>
+      <text x="650" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">REPOS</text><text x="650" y="635" fill="#e6edf3" font-size="22" font-weight="700">25</text>
       <rect x="712" y="588" width="100" height="58" rx="10" fill="#161b22" stroke="#2d333b"/>
-      <text x="762" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">STARS</text><text x="762" y="635" fill="#e6edf3" font-size="22" font-weight="700">1</text>
+      <text x="762" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">STARS</text><text x="762" y="635" fill="#e6edf3" font-size="22" font-weight="700">3</text>
       <rect x="824" y="588" width="100" height="58" rx="10" fill="#161b22" stroke="#2d333b"/>
-      <text x="874" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">FOLLOWERS</text><text x="874" y="635" fill="#e6edf3" font-size="22" font-weight="700">1</text>
+      <text x="874" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">FOLLOWERS</text><text x="874" y="635" fill="#e6edf3" font-size="22" font-weight="700">3</text>
       <rect x="936" y="588" width="100" height="58" rx="10" fill="#161b22" stroke="#2d333b"/>
-      <text x="986" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">FOLLOWING</text><text x="986" y="635" fill="#e6edf3" font-size="22" font-weight="700">7</text>
+      <text x="986" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">FOLLOWING</text><text x="986" y="635" fill="#e6edf3" font-size="22" font-weight="700">9</text>
       <rect x="1048" y="588" width="100" height="58" rx="10" fill="#161b22" stroke="#2d333b"/>
       <text x="1098" y="609" fill="#8b949e" font-size="10" letter-spacing="0.8">GISTS</text><text x="1098" y="635" fill="#e6edf3" font-size="22" font-weight="700">3</text>
     </g>

@@ -1,0 +1,61 @@
+name: Update GitHub profile
+
+on:
+  schedule:
+    # 01:17 UTC = 08:17 WIB, away from the busy start of the hour.
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-profile.yml'
+      - 'profile.config.json'
+      - 'scripts/update-profile.mjs'
+      - 'scripts/validate-svg.py'
+      - 'templates/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-github-profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.repository == 'Alice699/Alice699'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the latest default branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Test the updater
+        run: node --test scripts/update-profile.test.mjs
+      - name: Fetch public GitHub data and render the profile
+        run: node scripts/update-profile.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate rendered SVG files
+        run: python scripts/validate-svg.py
+      - name: Commit updated profile files
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git add README.md dark_mode.svg light_mode.svg data/profile.json
+          if git diff --cached --quiet; then
+            echo "The public profile is already up to date."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: refresh public GitHub profile'
+          git push origin "HEAD:${DEFAULT_BRANCH}"

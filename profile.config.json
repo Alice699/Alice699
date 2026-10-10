@@ -1,0 +1,13 @@
+{
+  "username": "Alice699",
+  "timeZone": "Asia/Jakarta",
+  "role": "Full Stack + Web3 Builder",
+  "focus": [
+    "full-stack products",
+    "web3 + blockchain systems",
+    "zero-knowledge / Avail / open source",
+    "clean code + system design"
+  ],
+  "web": ["Node.js", "React", "Next.js"],
+  "web3": ["Avail", "Ethereum", "Solidity"]
+}
