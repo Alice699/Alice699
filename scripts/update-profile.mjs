@@ -3,8 +3,6 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const startMarker = '<!-- profile:recent:start -->';
-const endMarker = '<!-- profile:recent:end -->';
 
 const singleLine = (value) => String(value ?? '').replace(/\s+/gu, ' ').trim();
 const shorten = (value, length) => {
@@ -20,10 +18,6 @@ export function escapeXml(value) {
     .replace(/[&<>"']/gu, (character) => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;',
     })[character]);
-}
-
-function markdown(value) {
-  return escapeXml(singleLine(value)).replace(/[\\`*_[\]()|~]/gu, '\\$&');
 }
 
 function count(value, label) {
@@ -193,30 +187,6 @@ export function renderSvg(template, snapshot, config) {
   });
 }
 
-export function renderReadme(existing, snapshot, config) {
-  const rows = snapshot.recentRepositories.map((repo) => {
-    const description = repo.description ? ` — ${markdown(shorten(repo.description, 220))}` : '';
-    return `- **[${markdown(repo.name)}](${repo.url})** · ${markdown(repo.language ?? 'Language not detected')}${description}`;
-  });
-  const block = [
-    startMarker,
-    '### Recent work',
-    '',
-    ...(rows.length ? rows : ['No public projects to show yet.']),
-    '',
-    `<sub>Public GitHub data · refreshed ${escapeXml(dates(snapshot, config).full)}.</sub>`,
-    endMarker,
-  ].join('\n');
-  const starts = existing.split(startMarker).length - 1;
-  const ends = existing.split(endMarker).length - 1;
-  if (starts === 0 && ends === 0) return `${existing.trimEnd()}\n\n${block}\n`;
-  if (starts !== 1 || ends !== 1 || existing.indexOf(startMarker) >= existing.indexOf(endMarker)) {
-    throw new Error('README update markers are missing, duplicated, or out of order.');
-  }
-  return existing.slice(0, existing.indexOf(startMarker))
-    + block + existing.slice(existing.indexOf(endMarker) + endMarker.length);
-}
-
 export async function refreshProfile({
   root = projectRoot,
   fetchImpl = fetch,
@@ -225,11 +195,10 @@ export async function refreshProfile({
 } = {}) {
   const config = JSON.parse(await readFile(join(root, 'profile.config.json'), 'utf8'));
   validateConfig(config);
-  const [{ profile, repos }, darkTemplate, lightTemplate, readme] = await Promise.all([
+  const [{ profile, repos }, darkTemplate, lightTemplate] = await Promise.all([
     fetchProfileData(config.username, { fetchImpl, token }),
     readFile(join(root, 'templates/dark_mode.svg'), 'utf8'),
     readFile(join(root, 'templates/light_mode.svg'), 'utf8'),
-    readFile(join(root, 'README.md'), 'utf8'),
   ]);
   const snapshot = createSnapshot(profile, repos, config, now);
 
@@ -237,7 +206,6 @@ export async function refreshProfile({
   const outputs = [
     ['dark_mode.svg', renderSvg(darkTemplate, snapshot, config)],
     ['light_mode.svg', renderSvg(lightTemplate, snapshot, config)],
-    ['README.md', renderReadme(readme, snapshot, config)],
     ['data/profile.json', JSON.stringify(snapshot, null, 2) + '\n'],
   ];
   await mkdir(join(root, 'data'), { recursive: true });

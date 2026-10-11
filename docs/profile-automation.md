@@ -1,8 +1,8 @@
 # Automatic profile updates
 
 The terminal card keeps its animated cat and light/dark themes. GitHub Actions
-refreshes both SVG files, the recent-work section of the README, and
-`data/profile.json` daily at **08:17 WIB** (`01:17 UTC`). Updates also run after
+refreshes both SVG files and `data/profile.json` daily at **08:17 WIB**
+(`01:17 UTC`). Updates also run after
 changes to the updater, templates, configuration, or update workflow on `main`.
 
 For an immediate update, open [Update GitHub profile](https://github.com/Alice699/Alice699/actions/workflows/update-profile.yml)
@@ -19,7 +19,7 @@ in the Actions tab and choose **Run workflow** on `main`.
 - Languages are the four most common primary languages among active, nonempty,
   original public projects, ranked by repository count with alphabetical ties.
   They describe the public projects rather than every language the author knows.
-- Recent work lists the three most recently pushed public projects. Forks,
+- The card lists the three most recently pushed public projects. Forks,
   archived/disabled/empty repositories, and the profile repository itself are
   excluded, so the updater's own commits do not become recent work.
 - The refresh timestamp uses `Asia/Jakarta` and is shown as WIB.
@@ -27,7 +27,7 @@ in the Actions tab and choose **Run workflow** on `main`.
 Every repository page is fetched before generation. If the API fails, data is
 incomplete, or rendering fails, the previous profile files are kept and the
 workflow reports a failure. GitHub-sourced strings are escaped before they are
-placed inside SVG or Markdown.
+placed inside SVG.
 
 ## Editing the profile
 
@@ -37,9 +37,8 @@ manually. The GitHub bio and pinned repositories are managed through GitHub's
 profile settings.
 
 Edit the SVG files in `templates/` to change the card's design. The root
-`dark_mode.svg` and `light_mode.svg` files are generated outputs. Manual README
-content outside `<!-- profile:recent:start -->` and `<!-- profile:recent:end -->`
-is preserved by the updater.
+`dark_mode.svg` and `light_mode.svg` files are generated outputs. The README
+embeds the card and is maintained manually; the updater does not modify it.
 
 ## Running locally
 

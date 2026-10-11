@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { basename, dirname, join, resolve } from 'node:path';
 import test from 'node:test';
 import {
-  createSnapshot, fetchProfileData, refreshProfile, renderReadme, renderSvg,
+  createSnapshot, fetchProfileData, refreshProfile, renderSvg,
 } from './update-profile.mjs';
 
 const config = JSON.parse(await readFile(new URL('../profile.config.json', import.meta.url), 'utf8'));
@@ -68,20 +68,6 @@ test('both SVG themes escape API text, fit long names, and render missing repo s
     assert.match(svg, /No public project/u);
     assert.match(svg, /<animateTransform/u);
   }
-});
-
-test('README updates are repeatable and preserve all manually written content', () => {
-  const snapshot = createSnapshot(profile, [repo('test-project', { description: '<script>\n**test** | [link]' })], config, now);
-  const initial = '# My intro\n\nA manually maintained paragraph.\n';
-  const first = renderReadme(initial, snapshot, config) + '\nMy custom footer.\n';
-  const second = renderReadme(first, snapshot, config);
-  assert.equal(second, first);
-  assert.ok(second.startsWith(initial));
-  assert.ok(second.endsWith('My custom footer.\n'));
-  assert.match(second, /https:\/\/github.com\/Alice699\/test-project/u);
-  assert.doesNotMatch(second, /<script>/u);
-  assert.match(second, /&lt;script&gt;/u);
-  assert.throws(() => renderReadme('<!-- profile:recent:start -->', snapshot, config), /markers/u);
   assert.throws(() => renderSvg('{{UNKNOWN}}', snapshot, config), /Unknown SVG/u);
 });
 

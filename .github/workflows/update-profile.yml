@@ -50,7 +50,7 @@ jobs:
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          git add README.md dark_mode.svg light_mode.svg data/profile.json
+          git add dark_mode.svg light_mode.svg data/profile.json
           if git diff --cached --quiet; then
             echo "The public profile is already up to date."
             exit 0
